@@ -3,7 +3,7 @@
 A command line utility that extracts a color palette from an image.
 
 <p align="center">
-  <img width="600" alt="Alacritty running vim inside tmux" src="pics/scrot.png">
+  <img width="444" alt="Alacritty running vim inside tmux" src="pics/scrot.png">
 </p>
 
 License: [0BSD](https://spdx.org/licenses/0BSD.html).
