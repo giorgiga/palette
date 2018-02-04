@@ -36,12 +36,12 @@ func TestTwo(t *testing.T) {
 	pixels := MakePixelSet( []Pixel{  Pixel{ 0, 0, 0 }, Pixel{ 255, 255, 255 } } )
 
 	mean := fmt.Sprintf("%v", pixels.Mean())
-	if "7f7f7f" != mean { t.Errorf("expected 7f7f7f mean but got %v", mean) }
+	if "808080" != mean { t.Errorf("expected 7f7f7f mean but got %v", mean) }
 
 	mpx, l, r := pixels.MedianCut(1)
 
 	smpx := fmt.Sprintf("%v", mpx)
-	if "7f7f7f" != smpx { t.Errorf("expected 7f7f7f median but got %v", smpx) }
+	if "808080" != smpx { t.Errorf("expected 7f7f7f median but got %v", smpx) }
 	if l.Size() != 1 { t.Errorf("expected left of size 1 but got %v", l.Size()) }
 	if r.Size() != 1 { t.Errorf("expected right of size 1 but got %v", r.Size()) }
 }

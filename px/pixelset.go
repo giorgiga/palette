@@ -1,6 +1,7 @@
 package px
 
 import (
+	"math"
 	"github.com/giorgiga/sstats"
 )
 
@@ -29,9 +30,9 @@ func (pset *PixelSet) Empty() bool {
 
 func (pset *PixelSet) Mean() Pixel {
 	return Pixel{
-		uint8( pset.rgbStats[0].Mean() ),
-		uint8( pset.rgbStats[1].Mean() ),
-		uint8( pset.rgbStats[2].Mean() ),
+		uint8( math.Floor(pset.rgbStats[0].Mean() + .5) ),
+		uint8( math.Floor(pset.rgbStats[1].Mean() + .5) ),
+		uint8( math.Floor(pset.rgbStats[2].Mean() + .5) ),
 	}
 }
 
